@@ -5,7 +5,8 @@
         <div class="footer_logo">
           <router-link to="/" class="base_link">
             <div class="footer_logo-wrapper">
-              <img src="/img/logo_256.png" class="base_image" alt="logo" loading="eager">
+              <img :src="makePath('img/logo_256.png')" class="base_image" alt="logo"
+                loading="eager">
             </div>
             <span class="footer_title">We Dispatch</span>
           </router-link>
@@ -121,6 +122,9 @@ export default {
     acceptNL() {
       if (!this.validEmail) return;
       console.log(this.validEmail, this.newsletter.email);
+    },
+    makePath(localPath) {
+      return `${process.env.ASSET_PATH}${localPath}`;
     },
   },
 };
