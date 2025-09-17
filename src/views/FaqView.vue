@@ -1,9 +1,8 @@
 <template>
-  <article class="about"></article>
+  <article class="faq"></article>
 </template>
-
 <script>
 export default {
-  name: 'AboutView',
+  name: 'FaqView',
 };
 </script>

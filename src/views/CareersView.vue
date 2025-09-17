@@ -1,9 +1,9 @@
 <template>
-  <article class="about"></article>
+  <article class="careers"></article>
 </template>
 
 <script>
 export default {
-  name: 'AboutView',
+  name: 'CareersView',
 };
 </script>

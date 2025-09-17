@@ -1,0 +1,68 @@
+@import "./css/reset.css";
+@import "./css/fonts.css";
+
+
+body{
+  background: $cream;
+  font-family: $text-font;
+}
+
+.base{
+  &_link{
+    text-decoration: none;
+    color: inherit;
+  }
+  &_image{
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    object-fit: cover;
+  }
+}
+
+.input_wide{
+  width: 100%;
+  padding: 12px;
+  background: none;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+  &::placeholder{
+    font-size: 14px;
+    color: $grey;
+    font-family: $text-font;
+  }
+}
+.btn{
+  &_submit{
+    color: $white;
+    background: $black;
+    border-radius: 12px;
+    letter-spacing: .02em;
+    font-weight: 800;
+    padding: 14px;
+    width: 100%;
+    font-family: $text-font;
+    font-size: 16px;
+    cursor: pointer;
+    &.small{
+      background: $red-gradient;
+      border-radius: 10px;
+      height: 41px;
+      padding: 12px;
+      position: relative;
+      width: auto;
+      &:after{
+        position: relative;
+        content: '→';
+        font-family: $text-font;
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+        top: calc(50% - 13.5px);
+        left: calc(50% - 10px);
+      }
+    }
+  }
+}

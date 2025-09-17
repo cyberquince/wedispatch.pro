@@ -1,9 +1,8 @@
 <template>
-  <article class="about"></article>
+  <article class="consent"></article>
 </template>
-
 <script>
 export default {
-  name: 'AboutView',
+  name: 'ConsentView',
 };
 </script>
