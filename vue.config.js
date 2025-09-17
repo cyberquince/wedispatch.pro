@@ -1,9 +1,11 @@
 const { defineConfig } = require('@vue/cli-service');
 const webpack = require('webpack');
 
+const ASSET_PATH = process.env.NODE_ENV === 'production' ? '/wedispatch.pro/' : '/';
+
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: process.env.NODE_ENV === 'production' ? '/wedispatch.pro/' : '/',
+  publicPath: ASSET_PATH,
   css: {
     loaderOptions: {
       scss: {
@@ -25,6 +27,7 @@ module.exports = defineConfig({
     plugins: [
       new webpack.DefinePlugin({
         __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: 'false',
+        'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH),
       }),
     ],
   },

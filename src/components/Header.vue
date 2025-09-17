@@ -4,7 +4,7 @@
       <div class="header_logo">
         <router-link to="/" class="base_link">
           <div class="header_logo-wrapper">
-            <img src="/img/logo_256.png" alt="logo" class="base_image" loading="eager">
+            <img :src="makePath('img/logo_256.png')" alt="logo" class="base_image" loading="eager">
           </div>
           <span class="logo_text">We Dispatch</span>
         </router-link>
@@ -84,6 +84,10 @@ export default {
         ro: '🇷🇴',
       };
       return flags[text];
+    },
+    makePath(localPath) {
+      const globalPath = process.env.ASSET_PATH;
+      return `${globalPath}${localPath}`;
     },
   },
 };

@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card_image">
-      <img :src="`/img/trailers/${name}.png`" class="base_image" :alt="altName">
+      <img :src="makePath(`img/trailers/${name}.png`)" class="base_image" :alt="altName">
     </div>
     <div class="card_description" v-if="description">
       <h2 class="card_description-name">{{ title }}</h2>
@@ -28,6 +28,12 @@ export default {
   },
   data() {
     return {};
+  },
+  methods: {
+    makePath(localPath) {
+      const globalPath = process.env.ASSET_PATH;
+      return `${globalPath}${localPath}`;
+    },
   },
   computed: {
     altName() {
