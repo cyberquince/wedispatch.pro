@@ -1,9 +1,0 @@
-<template>
-  <article class="about"></article>
-</template>
-
-<script>
-export default {
-  name: 'AboutView',
-};
-</script>
