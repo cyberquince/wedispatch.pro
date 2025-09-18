@@ -72,6 +72,7 @@
             <input type="email" class="input_wide" v-model="newsletter.email"
               placeholder="you@email.com" required autocomplete="off"
               @input="validateEmail" :class="{ small: validEmail }">
+            <!-- Fix button appearance on mobile (iOS) -->
             <transition name="appear-left">
               <button type="submit" class="btn btn_submit small"
                 v-show="validEmail"></button>

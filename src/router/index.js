@@ -56,6 +56,9 @@ const router = createRouter({
   routes,
   linkExactActiveClass: 'active',
   linkActiveClass: 'active',
+  scrollBehavior() {
+    return { top: 0 };
+  },
 });
 
 export default router;

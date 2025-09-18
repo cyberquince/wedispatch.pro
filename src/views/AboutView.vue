@@ -5,6 +5,7 @@
         <h2 class="about_stats-title">{{ $tm('about.title') }}</h2>
         <p class="about_stats-note">{{ $t('about.note') }}</p>
         <div class="about_stats-figures">
+          <!-- Align figure on mobile -->
           <div class="figure" v-for="(f, idx) in $tm('about.stats')" :key="idx">
             <span class="strong">{{ f.count }}{{ f.value }}</span>
             <span class="note">{{ f.text }}</span>
