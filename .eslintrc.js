@@ -11,6 +11,13 @@ module.exports = {
     parser: '@babel/eslint-parser',
   },
   rules: {
+    indent: ['error', 2, { MemberExpression: 1, VariableDeclarator: 2 }],
+    'vue/html-indent': ['error', 2, {
+      attribute: 1,
+      baseIndent: 1,
+      closeBracket: 0,
+      alignAttributesVertically: false,
+    }],
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'vuejs-accessibility/mouse-events-have-key-events': 'off',

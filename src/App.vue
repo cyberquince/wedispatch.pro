@@ -19,6 +19,7 @@ export default {
   max-width: 1100px;
   margin: 0 auto;
   padding: 46px 0;
+  min-height: calc(100dvh - 300px);
   @media screen {
     @media (max-width: 1100px) {
       max-width: 95%;

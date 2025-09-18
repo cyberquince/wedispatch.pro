@@ -47,7 +47,7 @@
               <div class="header_translations-item" v-for="(l, idx) in filteredLangs"
                 :key="idx" @click="$store.dispatch('changeLocale', l)"
                 :title="l.toUpperCase()">
-                  {{ textToFlag(l) }}
+                {{ textToFlag(l) }}
               </div>
             </div>
           </transition>

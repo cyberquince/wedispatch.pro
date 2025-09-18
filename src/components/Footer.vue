@@ -72,10 +72,10 @@
             <input type="email" class="input_wide" v-model="newsletter.email"
               placeholder="you@email.com" required autocomplete="off"
               @input="validateEmail" :class="{ small: validEmail }">
-              <transition name="appear-left">
-                <button type="submit" class="btn btn_submit small"
-                  v-show="validEmail"></button>
-              </transition>
+            <transition name="appear-left">
+              <button type="submit" class="btn btn_submit small"
+                v-show="validEmail"></button>
+            </transition>
           </form>
         </div>
       </div>
@@ -133,6 +133,7 @@ export default {
 .footer{
   background: $white;
   padding: 28px 0;
+  border-top: 1px solid $light-grey;
   &_wrapper{
     display: flex;
     justify-content: space-around;
@@ -145,6 +146,7 @@ export default {
     flex-basis: 260px;
   }
   &_logo{
+    margin-bottom: 8px;
     .base_link{
       display: flex;
       align-items: center;
@@ -157,6 +159,9 @@ export default {
     }
     &-note{
       font-size: 14px;
+    }
+    .footer_title{
+      margin-bottom: 0;
     }
   }
   &_company{
@@ -215,10 +220,12 @@ export default {
   }
   &_copy{
     text-align: center;
-    margin-top: 10px;
+    margin-top: 15px;
+    color: $grey;
   }
   &_developer{
     text-align: center;
+    color: $grey;
     .base_link{
       color: $red;
       &:hover{

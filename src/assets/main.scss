@@ -19,7 +19,16 @@ body{
     object-fit: cover;
   }
 }
-
+textarea.input_wide{
+  resize: none;
+  min-height: 80px;
+}
+input[type=number].input_wide{
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button{
+    display: none;
+  }
+}
 .input_wide{
   width: 100%;
   padding: 12px;
@@ -34,9 +43,15 @@ body{
     font-family: $text-font;
   }
 }
+.inv_input{
+  position: absolute;
+  visibility: hidden;
+}
 .btn{
   &_submit{
     color: $white;
+    display: block;
+    box-sizing: border-box;
     background: $black;
     border-radius: 12px;
     letter-spacing: .02em;
@@ -46,6 +61,14 @@ body{
     font-family: $text-font;
     font-size: 16px;
     cursor: pointer;
+    white-space: nowrap;
+    &.alt{
+      background: $red;
+      &.white{
+        background: $white;
+        color: $red;
+      }
+    }
     &.small{
       background: $red-gradient;
       border-radius: 10px;

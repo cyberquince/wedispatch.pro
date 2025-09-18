@@ -2,10 +2,10 @@
   <article class="home">
     <div class="home_section">
       <div class="home_stats">
-        <h2 class="home_title">{{ $t('home.title') }}</h2>
-        <p class="home_subtitle" data-i18n="home.subtitle">{{ $t('home.subtitle') }}</p>
+        <h2 class="home_stats-title">{{ $t('home.title') }}</h2>
+        <p class="home_stats-subtitle" data-i18n="home.subtitle">{{ $t('home.subtitle') }}</p>
         <div class="home_stats-kpis" role="list" aria-label="Key performance indicators">
-          <div class="home_stats-kpi" role="listitem" v-for="(k, i) in $tm('home.kpis')" :key="i">
+          <div class="home_stats-kpi" role="listitem" v-for="(k, i) in $tm('kpis')" :key="i">
             <div class="strong">{{ k.num }}</div>
             <span class="info">{{ k.lbl }}</span>
           </div>
@@ -26,8 +26,8 @@
       </div>
     </div>
     <div class="home_tracks">
-      <h2 class="home_tracks-title">{{ $t('trailers.title') }}</h2>
-      <p class="home_tracks-subtitle pre">{{ $tm('trailers.subtitle') }}</p>
+      <h2 class="home_tracks-title home_title">{{ $t('trailers.title') }}</h2>
+      <p class="home_tracks-subtitle home_subtitle pre">{{ $tm('trailers.subtitle') }}</p>
       <div class="home_tracks-examples">
         <div class="home_tracks-example" v-for="(t, idx) in $tm('trailers.all')" :key="idx">
           <TrailerCard :name="t" :title="$t(`trailers.${t}.title`)"
@@ -35,16 +35,27 @@
         </div>
       </div>
     </div>
+    <div class="home_works">
+      <h2 class="home_works-title home_title">{{ $t('how.title') }}</h2>
+      <p class="home_works-subtitle home_subtitle">{{ $t('how.subtitle') }}</p>
+      <Points :points="$tm('how.points')" :cta="$t('how.cta')" />
+    </div>
+    <div class="home_why">
+      <h2 class="home_why-title home_title">{{ $t('why.title') }}</h2>
+      <p class="home_why-subtitle home_subtitle">{{ $t('why.subtitle') }}</p>
+      <Points :points="$tm('why.bullets')" :cta="$t('why.cta')" background />
+    </div>
   </article>
 </template>
 
 <script>
 import Picker from '../components/Picker.vue';
 import TrailerCard from '../components/TrailerCard.vue';
+import Points from '../components/Points.vue';
 
 export default {
   name: 'HomeView',
-  components: { Picker, TrailerCard },
+  components: { Picker, TrailerCard, Points },
   data() {
     return {
       options: {
@@ -104,17 +115,22 @@ export default {
 <style lang="scss" scoped>
 .home{
   &_title{
-    font-size: 48px;
-    line-height: 1.05;
-    color: $black;
-    letter-spacing: -0.02em;
+    font-size: 40px;
+    text-align: center;
     font-weight: 800;
+    @media screen {
+      @media (max-width: 750px) {
+        font-size: 36px;
+      }
+    }
   }
   &_subtitle{
-    font-size: 18px;
-    margin-top: 12px;
-    margin-bottom: 8px;
-    color: $dark-grey;
+    font-size: 14px;
+    color: $grey;
+    text-align: center;
+    margin: 14px 0;
+    line-height: 1.6;
+    max-width: 100%;
   }
   &_section{
     display: flex;
@@ -125,6 +141,22 @@ export default {
     border-radius: 20px;
     justify-content: space-between;
     flex-wrap: wrap;
+    @media screen {
+      @media (max-width: 1100px) {
+        gap: 12px;
+      }
+      @media (max-width: 967px) {
+        justify-content: center;
+        max-width: 75%;
+        justify-self: center;
+      }
+      @media (max-width: 800px) {
+        max-width: 90%;
+      }
+       @media (max-width: 530px) {
+        max-width: 98%;
+      }
+    }
   }
   &_stats{
     background: $white;
@@ -132,11 +164,40 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media screen {
+      @media (max-width: 1100px) {
+        max-width: 49%;
+      }
+      @media (max-width: 967px) {
+        max-width: 90%;
+      }
+      @media (max-width: 530px) {
+        max-width: 98%;
+      }
+    }
     &-kpis{
       display: grid;
       gap: 8px;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       margin-top: 16px;
+    }
+    &-title{
+      font-size: 48px;
+      line-height: 1.05;
+      color: $black;
+      letter-spacing: -0.02em;
+      font-weight: 800;
+      @media screen {
+        @media (max-width: 1100px) {
+          font-size: 40px;
+        }
+      }
+    }
+    &-subtitle{
+      font-size: 18px;
+      margin-top: 12px;
+      margin-bottom: 8px;
+      color: $dark-grey;
     }
     &-kpi{
       padding: 18px 14px;
@@ -146,10 +207,23 @@ export default {
       .strong{
         font-size: 32px;
         font-weight: 800;
+        @media screen {
+          @media (max-width: 655px) {
+            font-size: 24px;
+          }
+          @media (max-width: 430px) {
+            font-size: 20px;
+          }
+        }
       }
       .info{
         color: $dark-grey;
         font-size: 14px;
+        @media screen {
+          @media (max-width: 655px) {
+            word-break: break-word;
+          }
+        }
       }
     }
   }
@@ -161,8 +235,16 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid $light-grey;
-    &-title{
-      font-size: 24px;
+    @media screen {
+      @media (max-width: 967px) {
+        width: 90%;
+        .selection{
+          margin-bottom: 15px;
+        }
+      }
+       @media (max-width: 530px) {
+        width: 98%;
+      }
     }
     &-header{
       display: flex;
@@ -176,11 +258,15 @@ export default {
     &-cta{
       font-size: 14px;
       color: $grey;
+      @media screen {
+        @media (max-width: 967px) {
+          margin-top: 15px;
+        }
+      }
     }
   }
   &_tracks{
     padding: 36px 0;
-    &-title,
     &-subtitle{
       text-align: center;
     }
@@ -188,11 +274,6 @@ export default {
       font-size: 40px;
     }
     &-subtitle{
-      font-size: 14px;
-      color: $grey;
-      margin: 14px 0;
-      line-height: 1.6;
-      max-width: 100%;
       @media screen {
         @media (max-width: 1100px) {
           white-space: wrap;
@@ -209,6 +290,12 @@ export default {
     &-example{
       flex-basis: 256px;
     }
+  }
+  &_works{
+    padding: 46px 0;
+  }
+  &_why{
+    padding: 46px 0;
   }
 }
 </style>
