@@ -39,13 +39,11 @@
       <h2 class="home_works-title home_title">{{ $t('how.title') }}</h2>
       <p class="home_works-subtitle home_subtitle">{{ $t('how.subtitle') }}</p>
       <Points :points="$tm('how.points')" :cta="$t('how.cta')" />
-      <!-- Align buttons on mobile -->
     </div>
     <div class="home_why">
       <h2 class="home_why-title home_title">{{ $t('why.title') }}</h2>
       <p class="home_why-subtitle home_subtitle">{{ $t('why.subtitle') }}</p>
       <Points :points="$tm('why.bullets')" :cta="$t('why.cta')" background />
-      <!-- Align buttons on mobile -->
     </div>
   </article>
 </template>

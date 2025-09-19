@@ -128,6 +128,7 @@ export default {
   &_cta{
     max-width: 250px;
     justify-self: center;
+    margin: 0 auto;
     margin-top: 28px;
   }
 }

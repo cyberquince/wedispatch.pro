@@ -116,7 +116,7 @@ export default {
       line-height: 1.1;
       margin-bottom: 10px;
       @media screen {
-        @media (max-width: 500px) {
+        @media (max-width: 850px) {
           text-align: center;
         }
       }
@@ -129,6 +129,7 @@ export default {
     &-figures{
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       gap: 5px;
       .figure{
         background: white;
@@ -138,7 +139,8 @@ export default {
         padding: 16px;
         flex-direction: column;
         align-items: center;
-        max-width: 170px;
+        flex-basis: 170px;
+        margin: 0 auto;
         .strong{
           font-size: 28px;
           font-weight: 800;
