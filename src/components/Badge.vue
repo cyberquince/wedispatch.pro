@@ -25,8 +25,14 @@ export default {
     },
   },
   computed: {
+    safeImage() {
+      if (!this.image || this.image === 'null') {
+        return 'img/team/default.png';
+      }
+      return this.image;
+    },
     pathToImage() {
-      return `${process.env.ASSET_PATH}${this.image}`;
+      return `${process.env.ASSET_PATH}${this.safeImage}`;
     },
     alt() {
       return `${this.name.toString().toLowerCase()} image`;

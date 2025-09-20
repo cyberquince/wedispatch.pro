@@ -99,7 +99,7 @@ export default {
     width: 12px;
     height: 12px;
     top: calc(50% - 6px);
-    right: 12px;
+    right: 8px;
     color: $dark-grey;
     font-size: 14px;
     transition: all .4s ease;
@@ -142,6 +142,7 @@ export default {
     box-sizing: border-box;
     border-radius: 6px;
     padding: 0 12px;
+    padding-right: 30px;
     z-index: 1;
     &.selected{
       color: $black;
