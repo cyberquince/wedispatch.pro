@@ -38,7 +38,7 @@
     <div class="home_works">
       <h2 class="home_works-title home_title">{{ $t('how.title') }}</h2>
       <p class="home_works-subtitle home_subtitle">{{ $t('how.subtitle') }}</p>
-      <Points :points="$tm('how.points')" :cta="$t('how.cta')" />
+      <Points :points="$tm('how.points')" :cta="$t('how.cta')" alt />
     </div>
     <div class="home_why">
       <h2 class="home_why-title home_title">{{ $t('why.title') }}</h2>

@@ -14,12 +14,6 @@
               office@routeonedispatch.com
             </a>
           </div>
-          <div class="contacts_info-item loc">
-            <mIcon name="location" :w="32" :h="32" />
-            <a href="https://maps.app.goo.gl/emvatXjo3y8mhMhL6" class="base_link">
-              2815 Forbs Ave Suite 107, Hoffman Estates, IL 60192, US
-            </a>
-          </div>
         </div>
         <h2 class="contacts_info-title">{{ $t('contact.social') }}</h2>
         <div class="contacts_info-socials">

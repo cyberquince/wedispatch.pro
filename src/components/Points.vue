@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="points_cta" v-if="cta">
-      <button type="button" class="btn btn_submit"
+      <button type="button" class="btn btn_submit" :class="{ alt: alt }"
         @click="performAction">{{ cta }}</button>
     </div>
   </div>
@@ -41,6 +41,11 @@ export default {
       required: false,
     },
     small: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    alt: {
       type: Boolean,
       required: false,
       default: false,
