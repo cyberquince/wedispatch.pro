@@ -11,6 +11,13 @@ import Footer from './components/Footer.vue';
 export default {
   name: 'App',
   components: { Header, Footer },
+  beforeMount() {
+    if (!this.$store.getters.countryCode) this.$store.dispatch('fetchCountry');
+    if (!this.$store.getters.locale) this.$store.dispatch('fetchLocale');
+    if (this.$i18n.locale !== this.$store.getters.locale) {
+      this.$store.dispatch('changeLocale', this.$store.getters.locale);
+    }
+  },
 };
 </script>
 

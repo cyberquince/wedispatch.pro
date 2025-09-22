@@ -133,7 +133,7 @@ export default {
 <style lang="scss" scoped>
 .footer{
   background: $white;
-  padding: 28px 0;
+  padding: 28px 0 18px 0;
   border-top: 1px solid $light-grey;
   &_wrapper{
     display: flex;
@@ -223,10 +223,12 @@ export default {
     text-align: center;
     margin-top: 15px;
     color: $grey;
+    font-size: 15px;
   }
   &_developer{
     text-align: center;
     color: $grey;
+    font-size: 13px;
     .base_link{
       color: $red;
       &:hover{

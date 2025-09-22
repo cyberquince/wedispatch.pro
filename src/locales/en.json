@@ -1,3 +1,350 @@
 {
-  "some": "variable"
+  "about": {
+    "button_all": "View services",
+    "button_contact": "Contact us",
+    "title": "About We Dispatch",
+    "note": "We help truck owners and fleets of any size earn more through smarter routing, reliable brokers, and 24/7 support.",
+    "stats": [
+      { "count": 10, "value": "k+", "text": "Successful loads" },
+      { "count": 96, "value": "%", "text": "Clients who return" },
+      { "count": 48, "value": "", "text": "States where we operate" }
+    ],
+    "mission": {
+      "title": "Our Mission",
+      "note": "Maximize driver earnings and reduce downtime through proactive market analysis, transparent communication, and lane-first planning."
+    },
+    "mission_stats": [
+      {
+        "title": "Transparency",
+        "note": "Only clear terms. Every load is booked after your confirmation.",
+        "icon": "approved"
+      },
+      {
+        "title": "Earnings First",
+        "note": "We time the market and build load chains to raise your revenue.",
+        "icon": "linechart"
+      },
+      {
+        "title": "Always Connected",
+        "note": "Dedicated dispatcher and 24/7 communication.",
+        "icon": "alltime"
+      }
+    ],
+    "milestone": "Milestones",
+    "milestones": [
+      { "years": "2021", "text": "Company founded by dispatchers with long-haul experience." },
+      { "years": "2022", "text": "Developed lane-first booking strategy across all 48 states." },
+      { "years": "2023", "text": "Surpassed 5,000 loads and achieved a 90% repeat rate." },
+      { "years": "2024-2025", "text": "Expanded to 48 states and improved routing to minimize deadhead." }
+    ],
+    "team_cta": "We’re hiring",
+    "team_title": "Leadership & Dispatch Leads"
+  },
+  "team": {
+    "members": [
+      { "name": "Alex Johnson", "position": "Head of Operations", "image": null },
+      { "name": "Maria Petrova", "position": "Senior Dispatcher — Reefer", "image": null },
+      { "name": "Dan Ionescu", "position": "Senior Dispatcher — Flatbed", "image": null },
+      { "name": "Sara Lee", "position": "Partnerships", "image": null }
+    ]
+  },
+  "careers": {
+    "apply": "Apply",
+    "questions": [
+      { "q": "Do you hire remotely?", "a": "Yes. Many roles are remote in US time; some require presence in Chișinău or IL." },
+      { "q": "What’s the schedule?", "a": "Depends on the role; dispatch operates 24/7." }
+    ],
+    "benefits": {
+      "title": "Benefits & Growth",
+      "bullets": [
+        { "title": "Performance bonuses", "text": "Monthly and quarterly KPI-based payouts." },
+        { "title": "Flexible shifts", "text": "Night/US-hours or hybrid depending on role." },
+        { "title": "Learning budget", "text": "Courses, events, English — covered by us." }
+      ]
+    },
+    "body": "Open positions (placeholder)",
+    "cta": {
+      "referral": "Refer a candidate",
+      "view": "See open roles"
+    },
+    "culture_link": "Peek into our culture deck → (coming soon)",
+    "empty": "No matches found. Try changing filters.",
+    "filters": {
+      "placeholder": "Search team, keywords",
+      "loc": "Any location",
+      "team": "All teams",
+      "format": "Any type"
+    },
+    "title": "Careers at We Dispatch",
+    "lead": "Building the future of dispatching: a culture of ownership, transparency, and 24/7 support.",
+    "positions": {
+      "dispatch": "Dispatcher",
+      "dp_reefer": "Dispatcher (Reefer)",
+      "dp_flatbed": "Dispatcher (Flatbed)",
+      "cos": "Carrier Onboarding Specialist",
+      "sm_logistics": "Sales Manager (Logistics)",
+      "sales": "Sales",
+      "analytics": "Analytics",
+      "da_alt": "Data Analyst (loads & rates)",
+      "trainee": "Dispatcher Trainee"
+    },
+    "locations": {
+      "remote": "Remote (US Time)",
+      "chisinau": "Chișinău",
+      "at_site": "Hoffman Estates, IL"
+    },
+    "time": {
+      "full": "Full-time",
+      "internship": "Internship"
+    },
+    "keywords": {
+      "reefer": "Reefer",
+      "en_b2": "EN B2+",
+      "tms": "TMS",
+      "flatbed": "Flatbed",
+      "negotiation": "Negotiation",
+      "docs": "Docs",
+      "mc_dot": "MC/DOT",
+      "crm": "CRM",
+      "outbound": "Outbound",
+      "brokers": "Brokers",
+      "sql": "SQL",
+      "sheets": "Sheets",
+      "looker": "Looker",
+      "training": "Training",
+      "night_shift": "Night shift",
+      "growth": "Career growth"
+    },
+    "process": {
+      "title": "Our hiring process",
+      "posts": [
+        { "title": "Apply", "text": "Short form — resume or LinkedIn link." },
+        { "title": "Intro call", "text": "30-minute call with HR." },
+        { "title": "Skills check", "text": "Practical task close to real work." },
+        { "title": "Offer", "text": "Transparent compensation range and start date." }
+      ]
+    },
+    "stats_title": "What we’re proud of"
+  },
+  "contact": {
+    "consent": "By checking this box, you agree to receive SMS from We Dispatch. Reply “STOP” to opt out.",
+    "formtitle": "WE’D LOVE TO HEAR FROM YOU",
+    "getintouch": "GET IN TOUCH",
+    "send": "Send",
+    "social": "SOCIAL MEDIA",
+    "subtitle": "For general inquiries fill out the form or call us",
+    "title": "Contacts",
+    "form": {
+      "name": "Your name",
+      "email": "Your email",
+      "phone": "Phone number (optional)",
+      "additional": "Additional information",
+      "success": "Your message has been sent successfully. We will reply soon.",
+      "error": "Form submission failed. Please try again later."
+    }
+  },
+  "footer": {
+    "company": "Company",
+    "note": "Dispatching services for logistics — helping fleets work smarter.",
+    "resources": "Resources",
+    "resource_list": {
+      "blog": "Blog",
+      "faq": "FAQ",
+      "privacy": "Privacy Policy",
+      "consent": "Terms & Conditions"
+    },
+    "subscribe": "Subscribe"
+  },
+  "kpis": [
+    { "lbl": "Weekly gross", "num": "$8,000+" },
+    { "lbl": "Successful loads", "num": "10k+" },
+    { "lbl": "Support", "num": "24/7" }
+  ],
+  "home": {
+    "subtitle": "We find profitable loads, plan routes and provide 24/7 support.",
+    "title": "Reliable truck dispatching that keeps you moving"
+  },
+  "how": {
+    "cta": "Join today",
+    "points": [
+      { "title": "Application", "note": "Fill a simple form. No hidden fees.", "icon": "application" },
+      { "title": "Call", "note": "Dispatcher clarifies your lanes and preferences.", "icon": "call-ongoing" },
+      { "title": "Load booking", "note": "We find the best rates for your equipment.", "icon": "book-approved" },
+      { "title": "Drive & earn", "note": "You drive — we handle the rest.", "icon": "route" }
+    ],
+    "subtitle": "Four steps — from application to steady loads.",
+    "title": "How it works"
+  },
+  "lead": {
+    "cta": "Contact us",
+    "equipment": "Trailer type",
+    "months": "Time in business (months)",
+    "note": "We’ll discuss your details during the call. No payment required.",
+    "title": "Calculate your quote",
+    "trucks": "Number of trucks"
+  },
+  "nav": {
+    "about": "About",
+    "careers": "Careers",
+    "contacts": "Contacts",
+    "home": "Home",
+    "services": "Services"
+  },
+  "pricing": {
+    "body": "Section content (placeholder)",
+    "title": "Pricing"
+  },
+  "trailers": {
+    "all": ["conestoga", "flatbed", "reefer", "stepdeck"],
+    "conestoga": {
+      "desc": "Flexible and protected freight transport",
+      "title": "Conestoga"
+    },
+    "flatbed": {
+      "desc": "Secure and efficient heavy-duty transportation",
+      "title": "Flatbed"
+    },
+    "reefer": {
+      "desc": "Temperature-controlled shipments with premium rates",
+      "title": "Reefer"
+    },
+    "stepdeck": {
+      "desc": "Ideal for oversized and tall freight",
+      "title": "Step Deck"
+    },
+    "subtitle": "Our team works efficiently: each dispatcher specializes in their trailer type — we know rates, locations and have direct broker contacts.",
+    "title": "Trailer types we work with"
+  },
+  "why": {
+    "cta": "Start working with us",
+    "bullets": [
+      {
+        "title": "Above-market rates",
+        "note": "Access to top brokers and direct shippers, aggressive search and smart timing.",
+        "icon": "linechart"
+      },
+      {
+        "title": "Dedicated dispatcher 24/7",
+        "note": "One point of contact tailored to your lanes and preferences.",
+        "icon": "assistant"
+      },
+      {
+        "title": "Transparent commission",
+        "note": "Fixed percentage, no hidden fees. You approve every load.",
+        "icon": "comission"
+      },
+      {
+        "title": "Deadhead-free routing",
+        "note": "We pre-plan load chains and returns to minimize empty miles.",
+        "icon": "map"
+      }
+    ],
+    "subtitle": "Tangible advantages that raise your earnings and save time daily.",
+    "title": "Why choose us"
+  },
+  "services": {
+    "title": "Our services",
+    "subtitle": "We offer comprehensive truck dispatch solutions for owner-operators and fleets: from load booking and paperwork to route optimization and fleet expansion.",
+    "cta": "Start working with us",
+    "call": "Call us",
+    "big_cta": {
+      "question": "Ready to move smarter?",
+      "solution": "Get a custom plan for your lanes and equipment. No commitments.",
+      "button_start": "Start working with us",
+      "button_call": "Call us"
+    },
+    "cards": [
+      {
+        "icon": "truck",
+        "title": "Load Booking",
+        "note": "We secure daily profitable loads from top brokers and shippers, tailored to your lanes and preferences.",
+        "cta": "See today’s best offers"
+      },
+      {
+        "icon": "truck",
+        "title": "Route Planning",
+        "note": "We minimize deadhead, improve average speed and design safer, more efficient routes so your trucks keep moving.",
+        "cta": "Reduce empty miles"
+      },
+      {
+        "icon": "truck",
+        "title": "Paperwork",
+        "note": "Rate confirmations, check calls, lumper and POD — we handle all documentation so you can focus on driving.",
+        "cta": "Get paperwork help"
+      },
+      {
+        "icon": "truck",
+        "title": "24/7 Support",
+        "note": "We work nights and weekends so you never have to wait.",
+        "cta": "Contact support"
+      },
+      {
+        "icon": "truck",
+        "title": "Payment Control",
+        "note": "Get paid faster with trusted brokers and factoring companies.",
+        "cta": "Check payment support options"
+      },
+      {
+        "icon": "truck",
+        "title": "Fleet Growth",
+        "note": "Advice on routes, RPM and scaling your fleet.",
+        "cta": "Scale your fleet"
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ — Frequently Asked Questions",
+    "subtitle": "Answers for owner-operators and company drivers.",
+    "new": "Ask your question",
+    "questions": [
+      {
+        "q": "What does a dispatch company do?",
+        "a": "We find and book the most profitable loads, negotiate with brokers, receivers and shippers, handle paperwork and provide 24/7 support."
+      },
+      {
+        "q": "How quickly will I get my first loads after signing up?",
+        "a": "Usually within 1–2 business days after onboarding we start booking your first trips."
+      },
+      {
+        "q": "How much does your service cost?",
+        "a": "Transparent commission as a percentage of gross revenue — no hidden fees. Exact terms are discussed individually."
+      },
+      {
+        "q": "Do I need my own broker accounts or subscriptions? (owner-operators)",
+        "a": "No. We use trusted contacts and our own access to load boards and brokers."
+      },
+      {
+        "q": "Can you help with factoring and quick payouts? (owner-operators)",
+        "a": "Yes. We recommend reliable factoring partners and help you choose the best terms."
+      },
+      {
+        "q": "How do you reduce empty miles and deadhead? (owner-operators)",
+        "a": "We pre-plan load chains and returns, coordinating timing and locations to minimize empty miles."
+      },
+      {
+        "q": "Do I need to talk to brokers directly? (company drivers)",
+        "a": "No. Your dispatcher handles all negotiations, confirmations and updates."
+      },
+      {
+        "q": "What if I face a problem on the road or a delay at loading?",
+        "a": "We are available 24/7. Contact your dispatcher and we will promptly resolve the issue with the broker/shipper."
+      },
+      {
+        "q": "Can I work only in specific lanes/states?",
+        "a": "Yes. We take into account your preferences for lanes, schedule and types of freight."
+      },
+      {
+        "q": "Do I need a long-term contract?",
+        "a": "No. The format is flexible: you can test the service without long commitments."
+      },
+      {
+        "q": "How does onboarding work?",
+        "a": "Everything is online: short form, dispatcher call to clarify lanes and preferences — then we start booking loads."
+      },
+      {
+        "q": "Do you work with new MC/DOT carriers?",
+        "a": "Yes. We have experience working with carriers who are just entering the market."
+      }
+    ]
+  }
 }
