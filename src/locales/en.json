@@ -1,4 +1,8 @@
 {
+  "base": {
+    "email": "email",
+    "address": "address"
+  },
   "about": {
     "button_all": "View services",
     "button_contact": "Contact us",
@@ -346,5 +350,264 @@
         "a": "Yes. We have experience working with carriers who are just entering the market."
       }
     ]
+  },
+  "terms": {
+    "title": "Terms & Conditions",
+    "updated": 1758574800,
+    "utext": "Last updated",
+    "list": [
+      {
+        "title": "Acceptance of Terms",
+        "type": "text",
+        "text": "These Terms & Conditions (“Terms”) govern your access to and use of the dispatch services, website, and communications provided by We Dispatch (“Company”, “we”, “us”, “our”). By using our services, you agree to these Terms and our Privacy Policy. If you do not agree, do not use our services."
+      },
+      {
+        "title": "Services We Provide",
+        "type": "text",
+        "text": "We offer non-asset, independent dispatch support services to carriers/owner-operators, including but not limited to load scouting, rate negotiation, route planning, paperwork coordination, and communication support. We are not a motor carrier, broker of property, or freight forwarder, and we do not assume care, custody, or control of freight."
+      },
+      {
+        "title": "Eligibility & Compliance",
+        "type": "ul",
+        "text": [
+          "You must be a duly authorized motor carrier with active MC/DOT, insurance (including cargo & liability), and all permits.",
+          "You remain solely responsible for safety, hours-of-service, equipment condition, and regulatory compliance.",
+          "You represent that all information you provide is accurate and kept current."
+        ]
+      },
+      {
+        "title": "Bookings, Pricing & Payment",
+        "type": "ul",
+        "text": [
+          "Your approval required: We will not book any load without your prior consent.",
+          "Fees: Dispatch fees/commissions are communicated in writing prior to service.",
+          "Invoices: You authorize us to issue invoices for our fees and to share required paperwork.",
+          "Factoring: If you use factoring, you remain responsible for all obligations under your factoring agreement."
+        ]
+      },
+      {
+        "title": "Detention, Layover, TONU",
+        "type": "text",
+        "text": "We can assist in pursuing detention, layover, or truck-order-not-used (TONU) charges as applicable under a given rate confirmation, but we do not guarantee recovery. Final payment decisions rest with the broker/shipper."
+      },
+      {
+        "title": "No Brokerage / No Carrier Liability",
+        "type": "text",
+        "text": "We do not assume carrier responsibilities and do not issue bills of lading. All transportation is performed under your carrier authority. We are not a party to the carriage contract between you and any broker/shipper."
+      },
+      {
+        "title": "Communications, E-Sign & Consent",
+        "type": "ul",
+        "text": [
+          "Electronic records: You consent to electronic signatures and records for operational and contractual communications.",
+          "SMS/Calls: By providing your phone number, you agree to receive operational SMS/calls; you may opt-out from non-essential messages at any time."
+        ]
+      },
+      {
+        "title": "Intellectual Property",
+        "type": "text",
+        "text": "The website, logo, copy, and materials are owned by us or our licensors and protected by IP laws. You may not copy, modify, or redistribute materials except as necessary to use the services."
+      },
+      {
+        "title": "Prohibited Use",
+        "type": "text",
+        "text": "You agree not to misuse the services, including fraudulent tenders, misrepresentation of equipment/insurance, unsafe practices, or interfering with our systems or third-party platforms."
+      },
+      {
+        "title": "Disclaimers",
+        "type": "text",
+        "text": "Services are provided “as is” and “as available.” We do not warrant market availability, specific rates, RPM, lane volumes, or that any load will meet your expectations. You are solely responsible for operational decisions."
+      },
+      {
+        "title": "Limitation of Liability",
+        "type": "text",
+        "text": "To the maximum extent permitted by law, we are not liable for indirect, incidental, special, consequential, or punitive damages. Our aggregate liability for any claims will not exceed the fees paid to us in the three (3) months preceding the event."
+      },
+      {
+        "title": "Indemnification",
+        "type": "textx",
+        "text": "You agree to defend, indemnify, and hold us harmless from claims, damages, and costs (including attorneys’ fees) arising from your operations, cargo, equipment, compliance, or breach of these Terms."
+      },
+      {
+        "title": "Term & Termination",
+        "type": "text",
+        "text": "Either party may terminate services at any time, with or without cause, upon notice. Fees accrued prior to termination remain due. Certain sections (e.g., IP, Disclaimers, Limitation, Indemnity, Governing Law) survive termination."
+      },
+      {
+        "title": "Governing Law & Dispute Resolution",
+        "type": "text",
+        "text": "These Terms are governed by the laws of the State of Illinois. Exclusive venue shall be the courts located in Cook County, Illinois."
+      },
+      {
+        "title": "Changes to Terms",
+        "type": "text",
+        "text": "We may update these Terms from time to time. Changes are effective when posted on this page with the “Last updated” date. Your continued use after changes constitutes acceptance."
+      }
+    ],
+    "contacts": {
+      "title": "Contact",
+      "note": "Questions about these Terms? Contact us:",
+      "email": "office@routeonedispatch.com",
+      "address": "2815 Forbs Ave Suite 107, Hoffman Estates, IL 60192, US"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "updated": 1758574800,
+    "utext": "Last updated",
+    "note": "This Privacy Policy explains how We Dispatch (“Company”, “we”, “us”, “our”) collects, uses, shares, and protects personal information when you visit our website, communicate with us (email, phone, SMS, messengers), or use our dispatch services.",
+    "list": [
+      {
+        "title": "Information We Collect",
+        "type": "strong-ul",
+        "text": [
+          {
+            "strong": "Contact & Account Data",
+            "text": "name, company, email, phone, preferred lanes, equipment type, time in business."
+          },
+          {
+            "strong": "Operational Data",
+            "text": "load preferences, routes, documents (W‑9, COI, MC/DOT, rate confirmations, POD, lumper)."
+          },
+          {
+            "strong": "Communications",
+            "text": "call logs, SMS, emails, chat messages related to operations and support."
+          },
+          {
+            "strong": "Usage & Device Data",
+            "text": "IP address, pages viewed, referrers, approximate location, browser & device identifiers, cookies."
+          }
+        ]
+      },
+      {
+        "title": "Sources",
+        "type": "text",
+        "text": "We collect data directly from you, from publicly available databases (e.g., FMCSA), from brokers/shippers you authorize us to work with, from factoring partners (if applicable), and via analytics tools on our website."
+      },
+      {
+        "title": "How We Use Information",
+        "type": "ul",
+        "text": [
+          "Provide and improve dispatch services, including load scouting, negotiation, paperwork, and support.",
+          "Operate our website and measure performance (analytics, diagnostics, fraud prevention).",
+          "Communicate about operations, invoices, service updates, marketing (with consent where required).",
+          "Comply with legal obligations and enforce agreements."
+        ]
+      },
+      {
+        "title": "Legal Bases (EU/UK GDPR)",
+        "type": "strong-ul",
+        "text": [
+          {
+            "strong": "Contract",
+            "text": "to provide dispatch services you request."
+          },
+          {
+            "strong": "Legitimate interests",
+            "text": "to run our business, ensure security, and improve services."
+          },
+          {
+            "strong": "Consent",
+            "text": "for optional marketing, certain cookies, and SMS where required."
+          },
+          {
+            "strong": "Legal obligations",
+            "text": "invoice retention, compliance, record‑keeping."
+          }
+        ]
+      },
+      {
+        "title": "Cookies & Analytics",
+        "type": "text",
+        "text": "We may use cookies and similar technologies to remember preferences, secure the site, and understand usage patterns. You can control cookies in your browser settings. Blocking some cookies may impact site functionality.\n\nEU/UK users: On your first visit, you will see a cookie consent banner allowing you to accept or reject optional cookies. You may also change your preferences anytime via our “Cookie Settings” link."
+      },
+      {
+        "title": "SMS, Calls & Email (CAN‑SPAM / TCPA)",
+        "type": "ul",
+        "text": [
+          "By providing your phone number or email, you consent to receive operational communications.",
+          "Marketing messages are sent only with your explicit opt‑in consent where required. You may opt‑out at any time: email — click “unsubscribe”; SMS — reply STOP; calls — ask to be added to our do‑not‑call list."
+        ]
+      },
+      {
+        "title": "How We Share Information",
+        "type": "strong-ul",
+        "text": [
+          {
+            "strong": "Service providers",
+            "text": "hosting, analytics, communications, document processing."
+          },
+          {
+            "strong": "Brokers/Shippers",
+            "text": "to tender loads and manage operations with your authorization."
+          },
+          {
+            "strong": "Factoring/Finance partners",
+            "text": "to facilitate payment where applicable."
+          },
+          {
+            "strong": "Legal/Compliance",
+            "text": "to comply with law, enforce agreements, and protect rights."
+          },
+          {
+            "strong": "Business transfers",
+            "text": "in mergers, acquisitions, or asset sales, with notice where required."
+          }
+        ]
+      },
+      {
+        "title": "Data Retention",
+        "type": "text",
+        "text": "We keep personal information only as long as necessary for the purposes described above (typically the term of service plus applicable limitation periods) or as required by law (e.g., tax and accounting rules)."
+      },
+      {
+        "title": "Security",
+        "type": "text",
+        "text": "We implement reasonable administrative, technical, and physical safeguards to protect personal information, including encryption in transit (TLS) and at rest where possible. No method of transmission or storage is 100% secure; we cannot guarantee absolute security."
+      },
+      {
+        "title": "International Transfers",
+        "type": "text",
+        "text": "Your data may be processed in countries other than your own. Where required, we use appropriate safeguards (e.g., Standard Contractual Clauses) to protect data transferred internationally. Key providers include hosting and analytics vendors (e.g., AWS, Google Cloud, or equivalent)."
+      },
+      {
+        "title": "Your Rights",
+        "type": "strong-ul",
+        "text": [
+          {
+            "strong": "EU/UK GDPR",
+            "text": "access, rectification, erasure, restriction, portability, objection, and the right to lodge a complaint with your local Data Protection Authority."
+          },
+          {
+            "strong": "California (CCPA/CPRA)",
+            "text": "right to know, delete, correct, and opt‑out of the sale/share of personal information. We do not sell personal information as defined by CCPA/CPRA."
+          },
+          {
+            "strong": "How to exercise",
+            "text": "contact us using the details below. We respond to verified requests within 30 days (GDPR) or 45 days (CCPA), extendable as permitted by law. We may verify your identity before responding."
+          }
+        ]
+      },
+      {
+        "title": "Children’s Privacy (COPPA)",
+        "type": "text",
+        "text": "Our services are not directed to children under 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us. If we become aware, we will promptly delete such information."
+      },
+      {
+        "title": "Third‑Party Links",
+        "type": "text",
+        "text": "Our site may contain links to third‑party sites. We are not responsible for their privacy practices."
+      },
+      {
+        "title": "Changes to this Policy",
+        "type": "text",
+        "text": "We may update this Policy periodically. We will post the new version with an updated “Last updated” date. If changes are material, we will provide additional notice where required."
+      }
+    ],
+    "contacts": {
+      "title": "Contact Us",
+      "email": "office@routeonedispatch.com",
+      "address": "2815 Forbs Ave Suite 107, Hoffman Estates, IL 60192, US"
+    }
   }
 }

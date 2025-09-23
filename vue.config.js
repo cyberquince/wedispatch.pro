@@ -14,7 +14,7 @@ module.exports = defineConfig({
     },
   },
   devServer: {
-    host: '0.0.0.0',
+    host: '192.168.0.101',
     port: 8090,
     proxy: {
       '/ip': {

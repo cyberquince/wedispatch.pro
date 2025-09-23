@@ -1,4 +1,8 @@
 {
+  "base": {
+    "email": "e-mail",
+    "address": "адрес"
+  },
   "about": {
     "button_all": "Посмотреть услуги",
     "button_contact": "Связаться с нами",

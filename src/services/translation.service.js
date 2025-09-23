@@ -11,4 +11,58 @@ export default createI18n({
     en,
     ro,
   },
+  datetimeFormats: {
+    'en-US': {
+      short: {
+        year: 'numeric', month: 'long', day: 'numeric',
+      },
+      long: {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        weekday: 'short',
+        hour: 'numeric',
+        minute: 'numeric',
+      },
+    },
+    'en-RU': {
+      short: {
+        year: 'numeric', month: 'long', day: 'numeric',
+      },
+      long: {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        weekday: 'short',
+        hour: 'numeric',
+        minute: 'numeric',
+      },
+    },
+    'ru-RU': {
+      short: {
+        year: 'numeric', month: 'numeric', day: 'numeric',
+      },
+      long: {
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric',
+        weekday: 'short',
+        hour: 'numeric',
+        minute: 'numeric',
+      },
+    },
+    'ro-RO': {
+      short: {
+        year: 'numeric', month: 'numeric', day: 'numeric',
+      },
+      long: {
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric',
+        weekday: 'short',
+        hour: 'numeric',
+        minute: 'numeric',
+      },
+    },
+  },
 });

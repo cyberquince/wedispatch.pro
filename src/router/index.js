@@ -4,7 +4,7 @@ import AboutView from '../views/AboutView.vue';
 import CareersView from '../views/CareersView.vue';
 import ServicesView from '../views/ServicesView.vue';
 import ContactsView from '../views/ContactsView.vue';
-import ConsentView from '../views/ConsentView.vue';
+import TermsView from '../views/TermsView.vue';
 import PrivacyView from '../views/PrivacyView.vue';
 import FaqView from '../views/FaqView.vue';
 
@@ -35,9 +35,9 @@ const routes = [
     component: ContactsView,
   },
   {
-    path: '/consent',
-    name: 'consent',
-    component: ConsentView,
+    path: '/terms',
+    name: 'terms',
+    component: TermsView,
   },
   {
     path: '/privacy',

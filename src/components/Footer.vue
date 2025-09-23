@@ -59,7 +59,7 @@
             </router-link>
           </li>
           <li class="footer_resources-nav_item">
-            <router-link to="/consent" class="base_link">
+            <router-link to="/terms" class="base_link">
               {{ $t('footer.resource_list.consent') }}
             </router-link>
           </li>
