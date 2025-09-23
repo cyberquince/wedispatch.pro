@@ -6,7 +6,10 @@
         <div class="contacts_info-body">
           <div class="contacts_info-item phone">
             <mIcon name="call" :w="32" :h="32"/>
-            <a href="tel:+12244072559" class="base_link">(224) 407-2559</a>
+            <div class="phones">
+              <a href="tel:+13312588338" class="base_link">+1 (331) 258-8338</a>
+              <a href="tel:+13312995581" class="base_link">+1 (331) 299-5581</a>
+            </div>
           </div>
           <div class="contacts_info-item email">
             <mIcon name="email" :w="32" :h="32" />
@@ -37,7 +40,10 @@
           <textarea :placeholder="$t('contact.form.additional')" v-model="newForm.additional"
             class="input_wide"></textarea>
           <CheckBox :text="$tm('contact.consent')" v-model="newForm.consent" />
-          <button class="btn btn_submit alt" type="submit">{{ $t('contact.send') }}</button>
+          <button class="btn btn_submit alt" type="submit"
+            :disabled="!newForm.consent">
+            {{ $t('contact.send') }}
+          </button>
           <transition name="appear">
             <p class="contacts_form-alert" :class="formSentStatus" v-if="formSentStatus">
               {{ $t(`contact.form.${formSentStatus}`) }}
@@ -67,6 +73,34 @@ export default {
       },
       formSentStatus: null,
     };
+  },
+  methods: {
+    sendForm() {
+      const formData = new FormData();
+      Object.entries(this.formInfo).forEach(([k, v]) => {
+        if (k !== 'attachment') {
+          formData.append(k, v);
+        }
+      });
+      fetch('/handlers/submit_form.php', {
+        method: 'POST',
+        body: formData,
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          this.formResult = data.status;
+          if (data.status === 'success') {
+            this.$refs.infoForm.reset();
+          }
+          setTimeout(() => {
+            this.formResult = null;
+          }, 5000);
+        })
+        .catch((err) => {
+          console.error('Error: ', err);
+          this.formResult = 'error';
+        });
+    },
   },
 };
 </script>
@@ -118,13 +152,16 @@ export default {
         margin-right: 10px;
         cursor: default;
       }
+      .phones{
+        display: flex;
+        flex-direction: column;
+      }
     }
     &-socials{
       display: flex;
       .base_link{
         .m-icon{
           margin-right: 10px;
-          cursor: default;
         }
         &:last-child .m-icon{
           margin-right: 0;

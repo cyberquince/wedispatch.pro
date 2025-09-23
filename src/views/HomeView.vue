@@ -21,7 +21,8 @@
         <Picker :options="nums" :placeholder="$t('lead.trucks')" v-model:selected="calc.tracks" />
         <Picker :options="times" nested :placeholder="$t('lead.months')"
           v-model:selected="calc.months" />
-        <button type="button" class="btn btn_submit">{{ $t('lead.cta') }}</button>
+        <button type="button" class="btn btn_submit"
+          @click="openModal">{{ $t('lead.cta') }}</button>
         <p class="home_calc-cta">{{ $t('lead.note') }}</p>
       </div>
     </div>
@@ -38,20 +39,26 @@
     <div class="home_works">
       <h2 class="home_works-title home_title">{{ $t('how.title') }}</h2>
       <p class="home_works-subtitle home_subtitle">{{ $t('how.subtitle') }}</p>
-      <Points :points="$tm('how.points')" :cta="$t('how.cta')" alt />
+      <Points :points="$tm('how.points')" :cta="$t('how.cta')"
+        @action-performed="$router.push('/contacts')"
+        alt />
     </div>
     <div class="home_why">
       <h2 class="home_why-title home_title">{{ $t('why.title') }}</h2>
       <p class="home_why-subtitle home_subtitle">{{ $t('why.subtitle') }}</p>
-      <Points :points="$tm('why.bullets')" :cta="$t('why.cta')" background />
+      <Points :points="$tm('why.bullets')" :cta="$t('why.cta')" background
+        @action-performed="$router.push('/contacts')"
+      />
     </div>
   </article>
 </template>
 
 <script>
+import { markRaw } from 'vue';
 import Picker from '../components/Picker.vue';
 import TrailerCard from '../components/TrailerCard.vue';
 import Points from '../components/Points.vue';
+import Form from '../components/Form.vue';
 
 export default {
   name: 'HomeView',
@@ -84,6 +91,22 @@ export default {
         up_to_24: 0.02,
         from_24: 0.04,
       },
+      formOptions: [
+        {
+          type: 'number',
+          inputmode: 'tel',
+          required: true,
+          placeholder: 'phone',
+          name: 'number',
+        },
+        {
+          type: 'text',
+          inputmode: '',
+          required: true,
+          placeholder: 'name',
+          name: 'name',
+        },
+      ],
     };
   },
   methods: {
@@ -98,6 +121,14 @@ export default {
     },
     normalPercent(val) {
       return `${(Math.round(val * 100) / 100).toFixed(2).replace(/\.00$/, '')}%`;
+    },
+    openModal() {
+      const modalProps = {
+        extraInfo: this.calc,
+        options: this.formOptions,
+        formTitle: this.$t('base.call_request'),
+      };
+      this.$emit('open-modal', markRaw(Form), modalProps);
     },
   },
   computed: {

@@ -8,7 +8,7 @@
           <router-link to="/contacts" class="base_link btn btn_submit">
             {{ $t('services.cta') }}
           </router-link>
-          <a href="tel:+12244072559" class="base_link btn_submit alt btn">
+          <a href="tel:+13312588338" class="base_link btn_submit alt btn">
             {{ $t('services.call') }}
           </a>
         </div>
@@ -41,7 +41,7 @@
             <router-link to="/contacts" class="base_link btn_submit">
               {{ $t('services.big_cta.button_start') }}
             </router-link>
-            <a href="tel:+12244072559" class="base_link btn_submit alt white">
+            <a href="tel:+13312588338" class="base_link btn_submit alt white">
               {{ $t('services.big_cta.button_call') }}
             </a>
           </div>
@@ -184,6 +184,7 @@ export default {
   &_cards{
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
     flex-wrap: wrap;
     gap: 20px;
     padding: 32px 0;

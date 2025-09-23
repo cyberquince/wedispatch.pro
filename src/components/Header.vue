@@ -1,6 +1,7 @@
 <template>
   <header class="header">
     <div class="header_wrapper">
+      <BurgerMenu @burger-opened="(n) => $emit('burger-opened', n)"/>
       <div class="header_logo">
         <router-link to="/" class="base_link">
           <div class="header_logo-wrapper">
@@ -57,8 +58,12 @@
   </header>
 </template>
 <script>
+import BurgerMenu from './BurgerMenu.vue';
+
 export default {
   name: 'Header',
+  components: { BurgerMenu },
+  emits: ['burger-opened'],
   data() {
     return {
       showLangs: false,
@@ -115,6 +120,7 @@ export default {
   }
   &_logo{
     font-weight: bold;
+    z-index: 3;
     .base_link{
       display: flex;
       gap: 12px;

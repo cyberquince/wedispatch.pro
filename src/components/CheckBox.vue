@@ -72,6 +72,7 @@ export default {
     margin-left: 10px;
     max-width: 90%;
     font-size: 14px;
+    user-select: none;
   }
 }
 </style>

@@ -128,6 +128,7 @@ export default {
       font-size: 18px;
       margin-top: 12px;
       margin-bottom: 6px;
+      text-align: center;
     }
   }
   &_cta{

@@ -1,7 +1,6 @@
 import { createI18n } from 'vue-i18n';
 import ru from '../locales/ru.json';
 import en from '../locales/en.json';
-import ro from '../locales/ro.json';
 
 export default createI18n({
   locale: 'en',
@@ -9,10 +8,9 @@ export default createI18n({
   messages: {
     ru,
     en,
-    ro,
   },
   datetimeFormats: {
-    'en-US': {
+    en: {
       short: {
         year: 'numeric', month: 'long', day: 'numeric',
       },
@@ -25,20 +23,7 @@ export default createI18n({
         minute: 'numeric',
       },
     },
-    'en-RU': {
-      short: {
-        year: 'numeric', month: 'long', day: 'numeric',
-      },
-      long: {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        weekday: 'short',
-        hour: 'numeric',
-        minute: 'numeric',
-      },
-    },
-    'ru-RU': {
+    ru: {
       short: {
         year: 'numeric', month: 'numeric', day: 'numeric',
       },
@@ -51,7 +36,7 @@ export default createI18n({
         minute: 'numeric',
       },
     },
-    'ro-RO': {
+    ro: {
       short: {
         year: 'numeric', month: 'numeric', day: 'numeric',
       },

@@ -6,9 +6,6 @@
         <p class="careers_section-intro_note">{{ $t('careers.lead') }}</p>
         <div class="careers_section-intro_cta">
           <div class="careers_section-intro-buttons">
-            <router-link to="/contacts" class="base_link btn_submit">
-              {{ $t('careers.cta.referral') }}
-            </router-link>
             <a href="#careers" class="base_link btn_submit alt">
               {{ $t('careers.cta.view') }}
             </a>
@@ -26,17 +23,17 @@
         </div>
       </div>
       <div class="careers_section-aside">
-        <h3 class="careers_section-aside_title">{{ $t('careers.stats_title') }}</h3>
+        <h3 class="careers_section-aside_title">{{ $t('careers.proud.title') }}</h3>
+        <p class="careers_section-aside_note">{{ $t('careers.proud.note') }}</p>
         <div class="careers_section-kpis" role="list" aria-label="Key performance indicators">
-          <div class="careers_section-kpi" role="listitem" v-for="(k, i) in $tm('kpis')" :key="i">
-            <span class="strong">{{ k.num }}</span>
-            <span class="info">{{ k.lbl }}</span>
+          <div class="careers_section-kpi" v-for="(k, i) in $tm('careers.proud.bullets')" :key="i">
+            <span class="strong">{{ k.title }}</span>
+            <span class="info">{{ k.text }}</span>
           </div>
         </div>
-        <div class="careers_section-muted">{{ $t('careers.culture_link') }}</div>
       </div>
     </div>
-    <div class="careers_section vacancies">
+    <div class="careers_section vacancies" v-if="showVacancies">
       <div class="careers_section-filters">
         <input type="text" :placeholder="$t('careers.filters.placeholder')" class="input_wide"
           v-model="filter.kwds">
@@ -80,12 +77,24 @@
         <Detail :q="q.q" :a="q.a" />
       </div>
     </div>
+    <div class="careers_section new" id="careers">
+      <h2 class="careers_section-join_title">{{ $t('careers.new.title') }}</h2>
+      <p class="careers_section-join_note">{{ $t('careers.new.note') }}</p>
+      <div class="careers_section-join_cta">
+        <button type="button" class="btn btn_submit alt"
+          @click="openModal">
+          {{ $t('careers.apply') }}
+        </button>
+      </div>
+    </div>
   </article>
 </template>
 
 <script>
+import { markRaw } from 'vue';
 import Detail from '../components/Detail.vue';
 import Picker from '../components/Picker.vue';
+import Form from '../components/Form.vue';
 
 export default {
   name: 'CareersView',
@@ -111,7 +120,48 @@ export default {
       filter: {
         kwds: null,
       },
+      showVacancies: false,
+      formOptions: [
+        {
+          type: 'text',
+          inputmode: '',
+          required: true,
+          placeholder: 'name',
+          name: 'name',
+        },
+        {
+          type: 'number',
+          inputmode: 'tel',
+          required: true,
+          placeholder: 'phone',
+          name: 'number',
+        },
+        {
+          type: 'email',
+          inputmode: 'email',
+          required: true,
+          placeholder: 'email',
+          name: 'email',
+        },
+        {
+          type: 'file',
+          inputmode: '',
+          required: true,
+          placeholder: 'file',
+          name: 'attachement',
+        },
+      ],
     };
+  },
+  methods: {
+    openModal() {
+      const modalProps = {
+        extraInfo: {},
+        options: this.formOptions,
+        formTitle: this.$t('base.apply'),
+      };
+      this.$emit('open-modal', markRaw(Form), modalProps);
+    },
   },
 };
 </script>
@@ -121,12 +171,16 @@ export default {
   &_section{
     margin: 24px 0;
     &.board,
-    &.vacancies{
+    &.vacancies,
+    &.new{
       background: $white;
       border: 1px solid $light-grey;
       border-radius: 20px;
       padding: 22px;
       gap: 22px;
+    }
+    &.new{
+      text-align: center;
     }
     &.board{
       display: flex;
@@ -135,6 +189,23 @@ export default {
       @media screen {
         @media (max-width: 950px) {
           flex-direction: column;
+        }
+      }
+    }
+    &-join{
+      &_title{
+        font-size: 29px;
+        font-weight: 800;
+      }
+      &_note{
+        color: $grey;
+        margin: 8px 0 10px 0;
+      }
+      &_cta{
+        display: flex;
+        justify-content: center;
+        .btn_submit{
+          width: auto;
         }
       }
     }
@@ -193,6 +264,7 @@ export default {
         }
         .strong{
           margin-bottom: 6px;
+          text-align: center;
           font-weight: 800;
           margin-top: auto;
         }
@@ -313,6 +385,10 @@ export default {
       background: white;
       border: 1px solid $light-grey;
       border-radius: 20px;
+      max-width: 500px;
+      &_cta{
+        margin-top: 20px;
+      }
       &_title{
         font-size: 19px;
         font-weight: 800;
@@ -323,15 +399,14 @@ export default {
           }
         }
       }
+      &_note{
+        margin-bottom: 10px;
+      }
     }
     &-kpis{
       gap: 8px;
       display: flex;
-      justify-content: space-evenly;
-      align-items: stretch;
-      @media (max-width: 530px) {
-        flex-wrap: wrap;
-      }
+      flex-direction: column;
     }
     &-muted{
       font-size: 14px;
@@ -351,19 +426,15 @@ export default {
       text-align: center;
       display: flex;
       flex-direction: column;
-      flex-basis: 130px;
-      @media (max-width: 530px) {
-        flex-basis: 100%;
-      }
       .strong{
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 800;
         @media screen {
           @media (max-width: 655px) {
-            font-size: 24px;
+            font-size: 20px;
           }
           @media (max-width: 430px) {
-            font-size: 20px;
+            font-size: 18px;
           }
         }
       }

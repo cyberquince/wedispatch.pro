@@ -5,8 +5,28 @@
 body{
   background: $cream;
   font-family: $text-font;
+  &:has(div > .modal) {
+    overflow: hidden;
+  }
 }
 
+.wd-icon{
+  font-family: 'FontAwesome';
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  &:before{
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    position: absolute;
+    font-family: 'FontAwesome';
+  }
+  &.bars:before{
+    content: '\f0c9';
+  }
+}
 .base{
   &_link{
     text-decoration: none;
@@ -27,6 +47,43 @@ input[type=number].input_wide{
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button{
     display: none;
+  }
+}
+input[type=file].input_wide{
+  position: relative;
+  visibility: hidden;
+  &:before{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 15px;
+    z-index: 6;
+    top: calc(50% - 13px);
+    content: '\f0c6';
+    font-family: 'FontAwesome';
+    font-size: 20px;
+    color: $grey;
+    visibility: visible;
+  }
+  &:after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    content: attr(placeholder);
+    padding: 0 12px;
+    padding-left: 40px;
+    font-size: 14px;
+    color: $grey;
+    font-family: $text-font;
+    line-height: 40px;
+    box-sizing: border-box;
+    visibility: visible;
+    cursor: pointer;
   }
 }
 .input_wide{
@@ -62,8 +119,15 @@ input[type=number].input_wide{
     font-size: 16px;
     cursor: pointer;
     white-space: nowrap;
+    &:disabled{
+      background: rgba($color: $black, $alpha: .6);
+      cursor: not-allowed;
+    }
     &.alt{
       background: $red;
+      &:disabled{
+        background: rgba($color: $red, $alpha: .6);
+      }
       &.white{
         background: $white;
         color: $red;
@@ -91,4 +155,8 @@ input[type=number].input_wide{
       }
     }
   }
+}
+
+.ss{
+  user-select: none;
 }

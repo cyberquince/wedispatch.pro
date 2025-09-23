@@ -47,5 +47,8 @@ html, div, p, body, article, input, button, textarea, select{
 	background: none;
 }
 .pre{
-	white-space: pre;
+	white-space: pre-wrap;
+}
+i{
+	font-style: normal;
 }

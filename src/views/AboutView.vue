@@ -44,7 +44,7 @@
         </div>
       </div>
     </div>
-    <div class="about_section team">
+    <div class="about_section team" v-if="showTeam">
       <div class="about_team-header">
         <h2 class="about_title">{{ $t('about.team_title') }}</h2>
         <router-link to="/careers" class="base_link btn_submit">
@@ -67,6 +67,11 @@ import Badge from '../components/Badge.vue';
 export default {
   name: 'AboutView',
   components: { Points, Badge },
+  data() {
+    return {
+      showTeam: false,
+    };
+  },
 };
 </script>
 <style lang="scss" scoped>

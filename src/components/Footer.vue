@@ -122,7 +122,27 @@ export default {
     },
     acceptNL() {
       if (!this.validEmail) return;
-      console.log(this.validEmail, this.newsletter.email);
+      const formData = new FormData();
+      formData.append('name', 'Newsletter Join');
+      formData.append('email', this.newsletter.email);
+      fetch(`${process.env.ASSET_PATH}handlers/submit_form.php`, {
+        method: 'POST',
+        body: formData,
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          this.formResult = data.status;
+          if (data.status === 'success') {
+            this.$refs.infoForm.reset();
+          }
+          setTimeout(() => {
+            this.formResult = null;
+          }, 5000);
+        })
+        .catch((err) => {
+          console.error('Error: ', err);
+          this.formResult = 'error';
+        });
     },
     makePath(localPath) {
       return `${process.env.ASSET_PATH}${localPath}`;
@@ -138,13 +158,13 @@ export default {
   &_wrapper{
     display: flex;
     justify-content: space-around;
-    gap: 18px;
+    gap: 23px;
     max-width: 1100px;
     margin: 0 auto;
     flex-wrap: wrap;
   }
   &_item{
-    flex-basis: 260px;
+    flex-basis: 250px;
   }
   &_logo{
     margin-bottom: 8px;
@@ -159,7 +179,7 @@ export default {
       border-radius: 50%;
     }
     &-note{
-      font-size: 14px;
+      font-size: 15px;
     }
     .footer_title{
       margin-bottom: 0;

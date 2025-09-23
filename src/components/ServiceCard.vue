@@ -44,6 +44,7 @@ export default {
   padding: 18px;
   display: flex;
   flex-direction: column;
+  height: 100%;
   &_icon{
     justify-self: flex-start;
     margin-right: auto;
@@ -57,12 +58,13 @@ export default {
     color: $grey;
     font-size: 14px;
     white-space: wrap;
+    margin-bottom: 12px;
   }
   &_cta{
     color: $red;
     font-size: 14px;
     font-weight: 800;
-    margin-top: 12px;
+    margin-top: auto;
     text-align: center;
     cursor: pointer;
   }

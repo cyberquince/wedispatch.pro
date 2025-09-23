@@ -1,8 +1,8 @@
 <template>
   <article class="legal" :class="type">
     <h1 class="legal_title">{{ title }}</h1>
-    <span class="legal_updated" :class="{ padded: !note }">
-      {{ `${utext}: ${$d(normalDate, 'short', currentDTLocale)}` }}
+    <span class="legal_updated" :class="{ padded: !note }" v-if="updated">
+      {{ `${utext}: ${$d(normalDate, 'short')}` }}
     </span>
     <p class="legal_note" v-if="note">{{ note }}</p>
     <ol class="legal_bullet">
@@ -13,9 +13,10 @@
         <h2 class="legal_item-title">{{ contacts.title }}</h2>
         <div class="legal_item-info">
           <p class="legal_item-note" v-if="contacts.note">{{ contacts.note }}</p>
-          <strong>{{ capitalize($t('base.email')) }}: </strong>
+          <strong class="ss">{{ capitalize($t('base.email')) }}: </strong>
           <a :href="`mailto:${contacts.email}`">{{ contacts.email }}</a><br>
-          <strong>{{ capitalize($t('base.address')) }}:</strong> {{ contacts.address }}
+          <strong class="ss">{{ capitalize($t('base.phone')) }}: </strong>
+          <span class="pre">{{ contacts.phone }}</span>
         </div>
       </li>
     </ol>
@@ -65,9 +66,6 @@ export default {
   computed: {
     normalDate() {
       return new Date(this.updated * 1000);
-    },
-    currentDTLocale() {
-      return `${this.$store.getters.locale}-${this.$store.getters.countryCode}`;
     },
   },
 };

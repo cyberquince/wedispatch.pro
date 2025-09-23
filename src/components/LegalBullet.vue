@@ -11,7 +11,7 @@
         {{ i }}
       </li>
     </ul>
-    <p class="legal_item-text" v-else>{{ text }}</p>
+    <p class="legal_item-text pre" v-else>{{ text }}</p>
   </li>
 </template>
 <script>
