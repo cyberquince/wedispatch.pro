@@ -163,6 +163,7 @@
     "social": "SOCIAL MEDIA",
     "subtitle": "For general inquiries fill out the form or call us",
     "title": "Contacts",
+    "email": "info@wedispatch.pro",
     "form": {
       "name": "Your name",
       "email": "Your email",
@@ -472,8 +473,8 @@
     "contacts": {
       "title": "Contact",
       "note": "Questions about these Terms? Contact us:",
-      "email": "office@routeonedispatch.com",
-      "address": "2815 Forbs Ave Suite 107, Hoffman Estates, IL 60192, US"
+      "email": "info@wedispatch.pro",
+      "phone": "\t+1 (331) 258-8338\n\t\t\t\t\t+1 (331) 299-5581"
     }
   },
   "privacy": {
@@ -631,7 +632,7 @@
     ],
     "contacts": {
       "title": "Contact Us",
-      "email": "office@routeonedispatch.com",
+      "email": "info@wedispatch.pro",
       "phone": "\t+1 (331) 258-8338\n\t\t\t\t\t+1 (331) 299-5581"
     }
   }

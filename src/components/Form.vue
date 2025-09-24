@@ -64,7 +64,7 @@ export default {
           formData.append('attachments[]', file);
         });
       }
-      fetch('/handlers/submit_form.php', {
+      fetch(`${process.env.ASSET_PATH}handlers/submit_form.php`, {
         method: 'POST',
         body: formData,
       })

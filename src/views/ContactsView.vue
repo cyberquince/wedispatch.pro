@@ -14,7 +14,7 @@
           <div class="contacts_info-item email">
             <mIcon name="email" :w="32" :h="32" />
             <a href="mailto:offce@routeonedispatch.com" class="base_link">
-              office@routeonedispatch.com
+              {{ $t('contact.email') }}
             </a>
           </div>
         </div>
