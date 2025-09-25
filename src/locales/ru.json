@@ -239,7 +239,7 @@
     "social": "СОЦСЕТИ",
     "subtitle": "Для общих вопросов заполните форму или позвоните нам",
     "title": "Контакты",
-    "email": "info@wedispatch.pro",
+    "email": "info{'@'}wedispatch.pro",
     "form": {
       "name": "Ваше имя",
       "email": "Ваш email",

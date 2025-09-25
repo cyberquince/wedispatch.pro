@@ -163,7 +163,7 @@
     "social": "SOCIAL MEDIA",
     "subtitle": "For general inquiries fill out the form or call us",
     "title": "Contacts",
-    "email": "info@wedispatch.pro",
+    "email": "info{'@'}wedispatch.pro",
     "form": {
       "name": "Your name",
       "email": "Your email",
@@ -473,7 +473,7 @@
     "contacts": {
       "title": "Contact",
       "note": "Questions about these Terms? Contact us:",
-      "email": "info@wedispatch.pro",
+      "email": "info{'@'}wedispatch.pro",
       "phone": "\t+1 (331) 258-8338\n\t\t\t\t\t+1 (331) 299-5581"
     }
   },
@@ -632,7 +632,7 @@
     ],
     "contacts": {
       "title": "Contact Us",
-      "email": "info@wedispatch.pro",
+      "email": "info{'@'}wedispatch.pro",
       "phone": "\t+1 (331) 258-8338\n\t\t\t\t\t+1 (331) 299-5581"
     }
   }
