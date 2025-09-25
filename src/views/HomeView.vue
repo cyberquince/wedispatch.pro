@@ -106,6 +106,13 @@ export default {
           placeholder: 'name',
           name: 'name',
         },
+        {
+          type: 'number',
+          inputmode: 'number',
+          required: true,
+          placeholder: 'mc_number',
+          name: 'mc',
+        },
       ],
     };
   },
