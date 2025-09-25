@@ -1,7 +1,8 @@
 const { defineConfig } = require('@vue/cli-service');
 const webpack = require('webpack');
 
-const ASSET_PATH = process.env.NODE_ENV === 'production' ? '/wedispatch.pro/' : '/';
+const ASSET_PATH = process.env.NODE_ENV === 'production' ? '/' : '/';
+const HANDLERS = process.env.NODE_ENV === 'production' ? '/handlers/' : '/api/';
 
 module.exports = defineConfig({
   transpileDependencies: true,
@@ -21,14 +22,20 @@ module.exports = defineConfig({
         changeOrigin: true,
         pathRewrite: { '^/ip': '' },
       },
+      '/api/': {
+        target: 'https://wedispatch.pro/handlers/',
+        changeOrigin: true,
+        pathRewrite: { '^/api': '' },
+      },
     },
   },
-  outputDir: 'dist/',
+  outputDir: 'deploy/',
   configureWebpack: {
     plugins: [
       new webpack.DefinePlugin({
         __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: 'false',
         'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH),
+        'process.env.HANDLERS': JSON.stringify(HANDLERS),
       }),
     ],
   },

@@ -125,7 +125,7 @@ export default {
       const formData = new FormData();
       formData.append('name', 'Newsletter Join');
       formData.append('email', this.newsletter.email);
-      fetch(`${process.env.ASSET_PATH}handlers/submit_form.php`, {
+      fetch(`${process.env.HANDLERS}/submit_form.php`, {
         method: 'POST',
         body: formData,
       })
@@ -133,7 +133,8 @@ export default {
         .then((data) => {
           this.formResult = data.status;
           if (data.status === 'success') {
-            this.$refs.infoForm.reset();
+            this.newsletter.email = null;
+            this.validEmail = false;
           }
           setTimeout(() => {
             this.formResult = null;
@@ -266,7 +267,7 @@ export default {
 .appear-left-leave-active{
   transform: translateX(0px);
   opacity: 1;
-  transition: all .4s ease;
+  transition: all .6s ease;
 }
 .appear-left-enter-from,
 .appear-left-leave-to{

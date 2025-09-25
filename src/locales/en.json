@@ -187,7 +187,7 @@
     "subscribe": "Subscribe"
   },
   "kpis": [
-    { "lbl": "Weekly gross", "num": "$8,000+" },
+    { "lbl": "Weekly gross", "num": "$8,500+" },
     { "lbl": "Successful loads", "num": "10k+" },
     { "lbl": "Support", "num": "24/7" }
   ],
