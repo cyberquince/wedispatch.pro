@@ -54,6 +54,7 @@ export default {
   methods: {
     sendInfo() {
       const formData = new FormData();
+      formData.append('name', this.formTitle);
       Object.entries(this.formInfo).forEach(([k, v]) => {
         if (k !== 'attachment') {
           formData.append(k, v);
@@ -64,7 +65,7 @@ export default {
           formData.append('attachments[]', file);
         });
       }
-      fetch(`${process.env.ASSET_PATH}handlers/submit_form.php`, {
+      fetch(`${process.env.HANDLERS}submit_form.php`, {
         method: 'POST',
         body: formData,
       })

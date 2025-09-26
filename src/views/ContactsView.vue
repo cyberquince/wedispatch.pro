@@ -30,18 +30,18 @@
       </div>
       <div class="contacts_form">
         <h2 class="contacts_form-title">{{ $t('contact.formtitle') }}</h2>
-        <form class="contacts_form-form" @submit.prevent="sendForm">
+        <form class="contacts_form-form" @submit.prevent="sendForm" ref="infoForm">
           <input :placeholder="$t('contact.form.name')" type="text" required autocomplete="off"
-            v-model="newForm.name" class="input_wide" />
+            v-model="newForm.username" class="input_wide" />
           <input type="email" :placeholder="$t('contact.form.email')" required
             v-model="newForm.email" class="input_wide" />
           <input :placeholder="$t('contact.form.phone')" type="number" inputmode="tel"
             v-model="newForm.phone" class="input_wide" />
           <textarea :placeholder="$t('contact.form.additional')" v-model="newForm.additional"
             class="input_wide"></textarea>
-          <CheckBox :text="$tm('contact.consent')" v-model="newForm.consent" />
+          <CheckBox :text="$tm('contact.consent')" v-model="consent" />
           <button class="btn btn_submit alt" type="submit"
-            :disabled="!newForm.consent">
+            :disabled="!consent">
             {{ $t('contact.send') }}
           </button>
           <transition name="appear">
@@ -65,30 +65,31 @@ export default {
   data() {
     return {
       newForm: {
-        name: null,
+        name: 'New Contact',
+        username: null,
         phone: null,
         email: null,
         additional: null,
-        consent: false,
       },
+      consent: false,
       formSentStatus: null,
     };
   },
   methods: {
     sendForm() {
       const formData = new FormData();
-      Object.entries(this.formInfo).forEach(([k, v]) => {
+      Object.entries(this.newForm).forEach(([k, v]) => {
         if (k !== 'attachment') {
           formData.append(k, v);
         }
       });
-      fetch('/handlers/submit_form.php', {
+      fetch(`${process.env.HANDLERS}/submit_form.php`, {
         method: 'POST',
         body: formData,
       })
         .then((res) => res.json())
         .then((data) => {
-          this.formResult = data.status;
+          this.formSentStatus = data.status;
           if (data.status === 'success') {
             this.$refs.infoForm.reset();
           }

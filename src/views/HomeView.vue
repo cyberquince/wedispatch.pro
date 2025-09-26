@@ -104,7 +104,7 @@ export default {
           inputmode: '',
           required: true,
           placeholder: 'name',
-          name: 'name',
+          name: 'username',
         },
         {
           type: 'number',
