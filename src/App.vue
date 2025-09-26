@@ -29,6 +29,7 @@ export default {
       this.component = component;
       this.modalProps = props;
       this.$refs.appModal.open();
+      console.log(this.modalProps);
     },
     closeModal() {
       this.$refs.appModal.close();

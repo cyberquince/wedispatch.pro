@@ -1,7 +1,7 @@
 <template>
   <div class="form">
     <div class="form_title">
-      <h3 class="title">{{ formTitle }}</h3>
+      <h3 class="title">{{ $t(`${formTitle}`) }}</h3>
     </div>
     <form class="form_form" @submit.prevent="sendInfo" ref="infoForm">
       <input :type="i.type"
@@ -54,7 +54,7 @@ export default {
   methods: {
     sendInfo() {
       const formData = new FormData();
-      formData.append('name', this.formTitle);
+      formData.append('name', this.$t(`${this.formTitle}`, 1, { locale: 'en' }));
       Object.entries(this.formInfo).forEach(([k, v]) => {
         if (k !== 'attachment') {
           formData.append(k, v);

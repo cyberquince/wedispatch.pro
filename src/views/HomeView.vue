@@ -133,7 +133,7 @@ export default {
       const modalProps = {
         extraInfo: this.calc,
         options: this.formOptions,
-        formTitle: this.$t('base.call_request'),
+        formTitle: 'base.call_request',
       };
       this.$emit('open-modal', markRaw(Form), modalProps);
     },

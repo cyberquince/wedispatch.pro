@@ -6,6 +6,7 @@ import ro from '../locales/ro.json';
 export default createI18n({
   locale: 'en',
   fallbackLocale: 'en',
+  legacy: true,
   messages: {
     ru,
     en,
